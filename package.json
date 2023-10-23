@@ -1,0 +1,25 @@
+{
+  "name": "weekly-meal-planner",
+  "version": "1.0.0",
+  "description": "simple weekly meal planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitor-P/Weekly-Meal-Planner.git"
+  },
+  "author": "Vitor-P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitor-P/Weekly-Meal-Planner/issues"
+  },
+  "homepage": "https://github.com/Vitor-P/Weekly-Meal-Planner#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3",
+    "nodemon": "^3.0.1"
+  }
+}
