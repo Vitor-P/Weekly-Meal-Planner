@@ -9,6 +9,9 @@ router.get("/route-test", (req, res) => {
 });
 
 // express.Router().route('/').get(tourController.getAllTours).post(tourController.createTour);
-router.route("/").get(mealsController.getMeal);
+// router.route("/").get(mealsController.getMeal).post(mealsController.createMeal);
+
+router.route("/my-route").get(mealsController.getMeat);
+router.route("/:id").get(mealsController.getMeal).patch(mealsController.updateMeal).delete(mealsController.deleteMeal);
 
 module.exports = router;
