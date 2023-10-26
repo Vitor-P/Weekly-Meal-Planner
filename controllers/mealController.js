@@ -1,3 +1,6 @@
+const Meal = require("../models/mealModel");
+const Ingredient = require("../models/ingredientModel");
+
 // Define CRUD operations here
 
 //TEST
