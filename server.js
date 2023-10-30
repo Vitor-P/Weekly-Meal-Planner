@@ -20,14 +20,17 @@ mongoose
 
 const port = process.env.PORT || 3000;
 
+//Test server
 app.get("/test", (req, res) => {
   res.send("Server Test Successful");
 });
 
+//Default path
 app.get("/", (req, res) => {
   res.send(`Server is running on port ${port}`);
 });
 
+//Start server & determine port
 app.listen(port, () => {
   console.log(`Server is running on port ${port} http://localhost:3000/`);
 });

@@ -1,15 +1,9 @@
 const Meal = require("../models/mealModel");
 const Ingredient = require("../models/ingredientModel");
-const { mealSample, meatSample } = require("../dev-data/data/ingredientSample");
-// const meatSample = require("../dev-data/data/ingredientSample");
+const { mealSample } = require("../dev-data/data/ingredientSample");
 
-// Define CRUD operations here
+// CRUD operations
 
-//TEST
-
-// app.get("/api/v1/meals/", (res, req) = {})
-
-// Create a meal
 exports.getMeal = (req, res) => {
   const meal = Meal.findById(req.params.id);
   console.log(req.params.id);
@@ -19,16 +13,6 @@ exports.getMeal = (req, res) => {
     status: "Meal",
     data: {
       meal: mealModel,
-    },
-  });
-};
-
-exports.getMeat = (req, res) => {
-  const meatModel = meatSample;
-  res.status(200).json({
-    status: "Meal",
-    data: {
-      meal: meatModel,
     },
   });
 };
