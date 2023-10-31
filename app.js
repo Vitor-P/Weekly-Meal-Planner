@@ -1,5 +1,5 @@
 const express = require("express");
-const mealsRouter = require("./routes/mealsRouter");
+const mealsRouter = require("./routes/mealRouter");
 
 const app = express();
 

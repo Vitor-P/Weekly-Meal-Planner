@@ -10,6 +10,8 @@ mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
   })
   .then(() => {
     console.log("Connected to MongoDB");
@@ -32,5 +34,5 @@ app.get("/", (req, res) => {
 
 //Start server & determine port
 app.listen(port, () => {
-  console.log(`Server is running on port ${port} http://localhost:3000/`);
+  console.log(`Server is running on port ${port} http://localhost:${port}/`);
 });
