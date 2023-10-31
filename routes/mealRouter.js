@@ -1,5 +1,5 @@
 const express = require("express");
-const mealController = require("../controllers/mealController");
+const mC = require("../controllers/mealController");
 //Routes
 const router = express.Router();
 
@@ -9,9 +9,9 @@ router.get("/route-test", (req, res) => {
 });
 
 // express.Router().route("/").get(tourController.getAllTours).post(tourController.createTour);
-router.route("/").get(mealController.getMeal).post(mealController.createMeal);
+router.route("/").get(mC.getMeal).post(mC.createMeal);
 
-// router.route("/my-route").get(mealController.getMeat);
-router.route("/:id").get(mealController.getMeal).patch(mealController.updateMeal).delete(mealController.deleteMeal);
+// router.route("/my-route").get(mC.getMeat);
+router.route("/:id").get(mC.getMeal).patch(mC.updateMeal).delete(mC.deleteMeal);
 
 module.exports = router;

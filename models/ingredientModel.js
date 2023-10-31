@@ -7,11 +7,10 @@ const ingredientSchema = new mongoose.Schema({
     required: [true, "A meal must have a name"],
     unique: true,
   },
-  characteristics: {
-    Main: Boolean,
-    Seasoning: Boolean,
-    Side: Boolean,
-    Condiment: Boolean,
+  type: {
+    type: String,
+    enum: ["main", "side", "seasoning", "condiment"],
+    required: [true, "An ingredient must have a type"],
   },
   description: String,
   date: {

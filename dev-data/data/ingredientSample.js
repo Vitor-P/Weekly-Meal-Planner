@@ -1,13 +1,13 @@
 exports.mealSample = {
   id: 5,
   name: "rice",
-  characteristics: "Main",
+  type: "Main",
 };
 
 exports.meatSample = {
   id: 6,
   name: "meat",
-  characteristics: "Side",
+  type: "Side",
 };
 
 // module.exports = mealSample;

@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const mealSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "A meal must have a name"],
+    // required: [true, "A meal must have a name"],
     unique: true,
   },
   description: String,
