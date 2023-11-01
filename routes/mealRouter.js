@@ -1,17 +1,17 @@
 const express = require("express");
-const mC = require("../controllers/mealController");
+const mealCon = require("../controllers/mealController");
 //Routes
 const router = express.Router();
 
 // Test
-router.get("/route-test", (req, res) => {
+router.get("/meal-route-test", (req, res) => {
   res.send("Server Test Successful");
 });
 
 // CRUD routing
-router.route("/").get(mC.getMeal).post(mC.createMeal);
+router.route("/").get(mealCon.getMeal).post(mealCon.createMeal);
 
-// router.route("/my-route").get(mC.getMeat);
-router.route("/:id").get(mC.getMeal).patch(mC.updateMeal).delete(mC.deleteMeal);
+////// router.route("/my-route").get(mealCon.getMeat);
+router.route("/:id").get(mealCon.getMeal).patch(mealCon.updateMeal).delete(mealCon.deleteMeal);
 
 module.exports = router;

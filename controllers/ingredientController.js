@@ -1,16 +1,15 @@
-const Meal = require("../models/mealModel");
+const Ingredient = require("../models/ingredientModel");
 
 // CRUD operations
 
-exports.getMeal = async (req, res) => {
+exports.getIngredient = async (req, res) => {
   try {
-    const meal = await Meal.findById(req.params.id);
+    const newIngredient = await Ingredient.findById(req.params.id);
     console.log(req.params.id);
-    console.log(meal);
     res.status(200).json({
       status: "Success",
       data: {
-        meal: meal,
+        ingredient: newIngredient,
       },
     });
   } catch (err) {
@@ -21,13 +20,13 @@ exports.getMeal = async (req, res) => {
   }
 };
 
-exports.createMeal = async (req, res) => {
+exports.createIngredient = async (req, res) => {
   try {
-    const newMeal = await Meal.create(req.body);
+    const newIngredient = await Ingredient.create(req.body);
     res.status(200).json({
       status: "Success",
       data: {
-        meal: newMeal,
+        ingredient: newIngredient,
       },
     });
   } catch (err) {
@@ -38,9 +37,9 @@ exports.createMeal = async (req, res) => {
   }
 };
 
-exports.updateMeal = async (req, res) => {
+exports.updateIngredient = async (req, res) => {
   try {
-    const meal = await Meal.findByIdAndUpdate(req.params.id, req.body, {
+    const newIngredient = await Ingredient.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
     });
@@ -48,7 +47,7 @@ exports.updateMeal = async (req, res) => {
     res.status(200).json({
       status: "Success",
       data: {
-        meal: meal,
+        ingredient: newIngredient,
       },
     });
   } catch (err) {
@@ -59,9 +58,9 @@ exports.updateMeal = async (req, res) => {
   }
 };
 
-exports.deleteMeal = async (req, res) => {
+exports.deleteIngredient = async (req, res) => {
   try {
-    const deleteMeal = await Meal.findByIdAndDelete(req.params.id);
+    const deleteIngredient = await Ingredient.findByIdAndDelete(req.params.id);
     res.status(200).json({
       status: "Success",
       message: "Deleted Successfully",
