@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    title Meal Planner
+    link(rel='stylesheet'  href='css/style.css')
+    link(rel='shortcut icon' type='image/png' href='/public/favicon.png')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+
+  body 
+    .grid-container 
+      .column-20
+        div
+          h2 Calendar
+          img(src='imgs/november-2023-calendar.avif', alt='Calendar Image' class="img")
+        div
+          h2 Settings
+          p Setting 01
+          p Setting 02
+          p Setting 03
+          p Setting 04
+      .column-80
+        .meal-preview
+          p meal -3
+        .meal-preview
+          p meal -2
+        .meal-preview
+          p meal -1
+        .meal-middle
+          p= meal
+        .meal-preview
+          p meal +1
+        .meal-preview
+          p meal +2
+        .meal-preview
+          p meal +3
+
+          
