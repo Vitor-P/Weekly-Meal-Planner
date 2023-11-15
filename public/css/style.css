@@ -54,28 +54,55 @@ body {
 .column-80 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  gap: 2rem;
+  grid-template-rows: 1fr 0.2fr 2fr 0.2fr 1fr;
+  gap: 1rem;
 }
 
 .meal-preview {
   padding: 10px;
-  margin: 0.2rem;
+  /* margin: 0.2rem; */
   border: 2px solid #bc9168;
-  border-radius: 10px;
+  /* border-radius: 20px 0 0 0; */
   background-color: rgba(188, 145, 104, 0.5);
+}
+
+.meal-middle {
+  grid-column: span 3;
+  padding: 2% 2% 0 2%;
+  border: 2px solid #da7314;
+  background-color: rgba(117, 67, 21, 0.596);
+  border-radius: 10px;
+}
+
+.lettuce {
+  grid-column: span 3;
+  border-top: 10px solid rgb(23, 182, 57);
+  border-bottom: 10px solid rgb(23, 182, 57);
+}
+
+.bacon {
+  grid-column: span 3;
+  border-top: 10px solid rgb(175, 43, 3);
+  border-bottom: 10px solid rgb(175, 43, 3);
+}
+
+.column-80 div:nth-child(1) {
+  border-radius: 4rem 0 0 0;
+}
+
+.column-80 div:nth-child(3) {
+  border-radius: 0 4rem 0 0;
+}
+
+.column-80 div:nth-child(7) {
+  border-radius: 0 0 0 4rem;
+}
+
+.column-80 div:nth-child(9) {
+  border-radius: 0 0 4rem 0;
 }
 
 /* .meal-preview:nth-last-child(-n + 3) {
   border: 2px solid #45ad87;
   background-color: #45ad8758;
 } */
-
-.meal-middle {
-  grid-column: span 3;
-  padding: 2% 2% 10% 2%;
-  border: 2px solid #bc9168;
-  background-color: rgba(188, 145, 104, 0.5);
-
-  border-radius: 10px;
-}
