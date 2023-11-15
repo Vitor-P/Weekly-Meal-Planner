@@ -12,10 +12,10 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  /* height: 100vh; */
   color: #333;
-  /* background-image: linear-gradient(to bottom, #79caff 0%, #ffffff 150%); */
   background-image: linear-gradient(to bottom, #45ad87af 0%, #ffffff 150%);
+  height: 100vh;
+  /* background-image: linear-gradient(to bottom, #79caff 0%, #ffffff 150%); */
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
@@ -39,8 +39,8 @@ body {
 
 .column-20 {
   display: grid;
-  grid-template-rows: 40% 58%;
-  gap: 2%;
+  grid-template-rows: 40% 55%;
+  gap: 5%;
 }
 
 .img {
