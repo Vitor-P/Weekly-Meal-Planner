@@ -13,14 +13,35 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   color: #000000;
-  /* background-image: linear-gradient(to bottom, #45ad87af 0%, #ffffff 150%); */
   height: 100vh;
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #f1f1f1 #888; /* Set the scrollbar track and handle colors */
+  overflow-y: scroll;
+  /* background-image: linear-gradient(to bottom, #45ad87af 0%, #ffffff 150%); */
   /* background-image: linear-gradient(to bottom, #79caff 0%, #ffffff 150%); */
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
   /* overflow-x: hidden; */
 }
+
+/* Scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track styles */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle styles (the draggable part of the scrollbar) */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* CONTAINERS */
 
 .grid-container {
   display: grid;
@@ -44,37 +65,43 @@ body {
 }
 
 .column-20-top {
+  /* width: 100%; */
+}
 
+.imgs {
 }
 
 .img {
   padding: 10px;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border-radius: 4rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .column-20-bottom {
   display: grid;
-  grid-template-rows: 3fr 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2.5fr 2fr 2fr 2fr 2fr 1fr;
   gap: 0.5rem;
 }
 
 /* Burger */
 .column-80 {
+  /* font-family: "Kalam"; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.1fr 2fr 0.1fr 1fr;
-  gap: 0.6rem;
+  grid-template-rows: 1.5fr 0.05fr 2fr 0.05fr 1.5fr;
+  gap: 0.4rem;
 }
 
 .meal-preview {
-  padding: 4% 0 0 4%;
+  padding: 3% 0 0 3%;
   /* margin: 0.2rem; */
   border: 2px solid #bc9168;
   /* border-radius: 20px 0 0 0; */
   background-color: rgba(188, 145, 104, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
 .meal-middle {
@@ -87,35 +114,60 @@ body {
 
 .bacon {
   grid-column: span 3;
-  border-top: 0.6rem solid rgb(212, 73, 8);
-  border-bottom: 0.6rem solid rgb(204, 51, 51);
+  border-top: 1rem solid rgb(204, 51, 51);
+  /* border-bottom: 0.6rem solid rgb(204, 51, 51); */
+  /* border-top: 0.6rem solid rgb(212, 73, 8); */
   /* border-radius: 2px; */
 }
 
 .cheese {
   grid-column: span 3;
-  border-top: 10px solid rgb(255, 183, 76);
-  border-bottom: 10px solid rgb(255, 183, 76);
+  border-top: 1rem solid rgb(255, 183, 76);
+  /* border-bottom: 0.6rem solid rgb(255, 183, 76); */
   /* border-bottom: 10px solid rgb(23, 182, 57); */
 }
 
 .column-80 div:nth-child(1) {
-  border-radius: 4rem 0 0 0;
+  border-radius: 2.5rem 0 0 0;
 }
 
 .column-80 div:nth-child(3) {
-  border-radius: 0 4rem 0 0;
+  border-radius: 0 2.5rem 0 0;
 }
 
 .column-80 div:nth-child(7) {
-  border-radius: 0 0 0 4rem;
+  border-radius: 0 0 0 2.5rem;
 }
 
 .column-80 div:nth-child(9) {
-  border-radius: 0 0 4rem 0;
+  border-radius: 0 0 2.5rem 0;
 }
 
 /* .meal-preview:nth-last-child(-n + 3) {
   border: 2px solid #45ad87;
   background-color: #45ad8758;
+} */
+
+.meal-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.2rem 1.7rem 0 0;
+  /* position: absolute; */
+  /* top: -50%; */
+  /* right: -50%; */
+  /* transform: translate(100%, 0%); */
+}
+
+.ingredient-list {
+  font-family: "Kalam";
+  display: flex;
+  flex-direction: row;
+  /* padding: 0 0.4rem 0.6rem 0; */
+  gap: 0.6rem;
+  list-style: none;
+}
+
+/* .ingredient-list > * {
+  padding-right: 0.4rem;
 } */

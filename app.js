@@ -15,9 +15,13 @@ app.use(express.json());
 
 //Routing
 app.get("/", (req, res) => {
+  const today = new Date();
+  today.setDate(today.getDate() - 1);
+  const formattedDate = today.toISOString().slice(0, 10);
   res.status(200).render("base", {
     meal: "My Meal",
     date: "Today",
+    formattedDate,
   });
   // res.status(200).sendFile(path.join(__dirname, "views", "index.html"));
 });
