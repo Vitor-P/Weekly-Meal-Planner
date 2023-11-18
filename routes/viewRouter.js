@@ -3,8 +3,6 @@ const viewController = require("../controllers/viewController");
 
 const router = express.Router();
 
-router.route("/v1").get(viewController.getOverview);
-
-router.get("/v2", viewController.getOverview);
+router.get("/", viewController.getOverview);
 
 module.exports = router;
