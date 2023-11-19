@@ -1,0 +1,48 @@
+.column-80
+  .meal-preview
+    h2(class= "meal-date") DATE
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1
+  .meal-preview
+    h2(class= "meal-date") DATE 
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1
+  //- .meal-preview
+  //-   h2(class= "meal-date") DATE 
+  //-   h2 MEAL TYPE
+  //-   ul.ingredient-list
+  //-     li meal ingredients 1
+  .meal-preview
+    h2.meal-date DATE
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1    
+  .bacon
+  .meal-middle
+    form(action="/create-meal", method="POST")
+    // Other meal fields
+    label(for="ingredient" class="form-label") Select Ingredients:
+    select(name="ingredients", id="ingredient", class="form-select")
+        each ingredient in ingredients
+            option(value=ingredient.name)= ingredient.name
+    // Submit button
+    button(type="submit" class="btn btn-primary") Create Meal
+
+  .cheese
+  .meal-preview
+    h2(class= "meal-date") DATE 
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1
+  .meal-preview
+    h2(class= "meal-date") DATE 
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1
+  .meal-preview
+    h2(class= "meal-date") DATE 
+    h2 MEAL TYPE
+    ul.ingredient-list
+      li meal ingredients 1

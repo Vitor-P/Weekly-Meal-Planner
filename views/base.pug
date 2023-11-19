@@ -14,57 +14,8 @@ html
 
   body 
     .grid-container 
-      .column-20
-        .column-20-top
-          h2 Calendar
-          .imgs
-          img(src='imgs/november-2023-calendar.avif', alt='Calendar Image' class="img")
-        .column-20-bottom
-          h2 Settings
-          p Setting 01
-          p Setting 02
-          p Setting 03
-          p Setting 04
-      .column-80
-        .meal-preview
-          h2(class= "meal-date") DATE
-          h2 MEAL TYPE
-          ul.ingredient-list
-            li meal ingredients 1
-        .meal-preview
-          h2(class= "meal-date") DATE 
-          h2 MEAL TYPE
-          ul.ingredient-list
-            li meal ingredients 1
-        //- .meal-preview
-        //-   h2(class= "meal-date") DATE 
-        //-   h2 MEAL TYPE
-        //-   ul.ingredient-list
-        //-     li meal ingredients 1
-        .meal-preview
-           h2.meal-date DATE
-           h2 MEAL TYPE
-           ul.ingredient-list
-             li meal ingredients 1    
-        .bacon
-        .meal-middle
-          p= ingredients
-        .cheese
-        .meal-preview
-          h2(class= "meal-date") DATE 
-          h2 MEAL TYPE
-          ul.ingredient-list
-            li meal ingredients 1
-        .meal-preview
-          h2(class= "meal-date") DATE 
-          h2 MEAL TYPE
-          ul.ingredient-list
-            li meal ingredients 1
-        .meal-preview
-          h2(class= "meal-date") DATE 
-          h2 MEAL TYPE
-          ul.ingredient-list
-            li meal ingredients 1
+      include _left-column
+      include _right-column
 
 
           

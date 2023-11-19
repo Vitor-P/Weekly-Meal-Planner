@@ -11,3 +11,13 @@ exports.getOverview = catchAsync(async (req, res) => {
   });
   // res.status(200).sendFile(path.join(__dirname, "views", "index.html"));
 });
+
+exports.getOverview = catchAsync(async (req, res) => {
+  const ingredients = await Ingredient.find({}, "name -_id");
+  
+  res.status(200).render("base", {
+    title: "My Meal",
+    ingredients,
+    date: "Today",
+  });
+});

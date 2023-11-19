@@ -2,6 +2,11 @@
 const mongoose = require("mongoose");
 
 const mealSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ["breakfast", "lunch", "snack", "dinner"],
+    required: [true, "An meal must have a type"],
+  },
   name: {
     type: String,
     // required: [true, "A meal must have a name"],
@@ -10,13 +15,13 @@ const mealSchema = new mongoose.Schema({
   description: String,
   ingredients: [
     {
-      name: String,
-      quantity: String,
-      characteristics: {
-        Main: Boolean,
-        Seasoning: Boolean,
-        Side: Boolean,
-        Condiment: Boolean,
+      ingredients: {
+        type: String, // Reference to the 'name' field in the Ingredients collection
+        ref: "ingredient",
+      },
+      quantity: {
+        type: String,
+        default: 1,
       },
     },
   ],

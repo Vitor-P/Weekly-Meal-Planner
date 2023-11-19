@@ -168,6 +168,43 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
 }
 
-/* .ingredient-list > * {
-  padding-right: 0.4rem;
-} */
+/*TEST*/
+/* CSS for the dropdown */
+.form-select {
+  width: 200px; /* Adjust width as needed */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Style when dropdown is active/open */
+.form-select:focus {
+  outline: none;
+  border-color: #007bff; /* Example color for focus state */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Example shadow for focus state */
+  overflow: hidden;
+}
+
+/* Example button styles - Adjust as needed */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
