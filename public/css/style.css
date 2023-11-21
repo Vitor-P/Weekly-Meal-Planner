@@ -1,3 +1,14 @@
+/* 
+Colors: 
+#bc9168
+rgb(255, 183, 76)
+#da7314
+rgba(117, 67, 21, 0.596);
+#1E7E34
+
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +28,6 @@ body {
   scrollbar-width: thin; /* Set the width of the scrollbar */
   scrollbar-color: #f1f1f1 #888; /* Set the scrollbar track and handle colors */
   overflow-y: scroll;
-  /* background-image: linear-gradient(to bottom, #45ad87af 0%, #ffffff 150%); */
-  /* background-image: linear-gradient(to bottom, #79caff 0%, #ffffff 150%); */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* overflow-x: hidden; */
 }
 
 /* Scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
@@ -104,20 +109,40 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.meal-middle {
-  grid-column: span 3;
-  padding: 2% 2% 0 2%;
-  border: 2px solid #da7314;
-  background-color: rgba(117, 67, 21, 0.596);
-  border-radius: 10px;
-}
-
 .bacon {
   grid-column: span 3;
   border-top: 1rem solid rgb(204, 51, 51);
   /* border-bottom: 0.6rem solid rgb(204, 51, 51); */
   /* border-top: 0.6rem solid rgb(212, 73, 8); */
   /* border-radius: 2px; */
+}
+
+.meal-middle {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 0.5rem;
+  padding: 1%;
+  grid-column: span 3;
+  border: 2px solid #713700;
+  background-color: rgba(117, 67, 21, 0.596);
+  border-radius: 10px;
+}
+
+.current-meal {
+  position: relative;
+  border-right: 2px solid rgba(52, 29, 8, 0.596);
+}
+
+.current-meal .meal-date {
+  position: absolute;
+  top: -0.8rem;
+  right: -0.8rem;
+}
+
+.new-meal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .cheese {
@@ -153,10 +178,6 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   right: 0;
   padding: 0.2rem 1.7rem 0 0;
-  /* position: absolute; */
-  /* top: -50%; */
-  /* right: -50%; */
-  /* transform: translate(100%, 0%); */
 }
 
 .ingredient-list {
@@ -171,27 +192,30 @@ body::-webkit-scrollbar-thumb {
 /*TEST*/
 /* CSS for the dropdown */
 .form-select {
-  width: 200px; /* Adjust width as needed */
-  padding: 10px;
-  font-size: 16px;
+  width: fit-content; /* Adjust width as needed */
+  height: fit-content;
+  padding: 0.5rem;
+  background-color: #ecd6c1;
+  /* font-size: 16px; */
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
+  border-radius: 0.5rem;
 }
 
 /* Style when dropdown is active/open */
 .form-select:focus {
   outline: none;
-  border-color: #007bff; /* Example color for focus state */
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Example shadow for focus state */
+  border-color: #614c2e; /* Example color for focus state */
+  box-shadow: 0 0 5px #3f301c; /* Example shadow for focus state */
   overflow: hidden;
 }
 
 /* Example button styles - Adjust as needed */
 .btn {
-  display: inline-block;
-  padding: 8px 12px;
-  font-size: 16px;
+  /* display: inline-block; */
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  /* font-size: 16px; */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -200,11 +224,11 @@ body::-webkit-scrollbar-thumb {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border: 1px solid #007bff;
+  background-color: #614c2e;
+  border: 1px solid #614c2e;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: #3f301c;
+  border-color: #3f301c;
 }

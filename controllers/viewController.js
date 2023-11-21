@@ -4,9 +4,11 @@ const catchAsync = require("../utils/catchAsync");
 
 exports.getOverview = catchAsync(async (req, res) => {
   const ingredients = await Ingredient.find({}, "name -_id");
+  const mealType = await Meal.find({}, "type -_id");
   res.status(200).render("base", {
     title: "My Meal",
     ingredients,
+    mealType,
     date: "Today",
   });
   // res.status(200).sendFile(path.join(__dirname, "views", "index.html"));
@@ -14,7 +16,7 @@ exports.getOverview = catchAsync(async (req, res) => {
 
 exports.getOverview = catchAsync(async (req, res) => {
   const ingredients = await Ingredient.find({}, "name -_id");
-  
+
   res.status(200).render("base", {
     title: "My Meal",
     ingredients,

@@ -9,28 +9,50 @@
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
-  //- .meal-preview
-  //-   h2(class= "meal-date") DATE 
-  //-   h2 MEAL TYPE
-  //-   ul.ingredient-list
-  //-     li meal ingredients 1
   .meal-preview
     h2.meal-date DATE
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1    
+
   .bacon
+
   .meal-middle
-    form(action="/create-meal", method="POST")
-    // Other meal fields
-    label(for="ingredient" class="form-label") Select Ingredients:
-    select(name="ingredients", id="ingredient", class="form-select")
-        each ingredient in ingredients
-            option(value=ingredient.name)= ingredient.name
-    // Submit button
-    button(type="submit" class="btn btn-primary") Create Meal
+    .current-meal
+      h2.meal-date DATE
+      h2 MEAL TYPE
+      ul.ingredient-list
+        li meal ingredients 1
+    div
+      h2 New Meal
+      form(action="/create-meal", method="POST")
+        // Other meal fields
+        select(name="mealType", id="mealType", class="form-select")
+          option(value="Breakfast") Breakfast
+          option(value="Lunch") Lunch
+          option(value="Snack") Snack
+          option(value="Dinner") Dinner
+      h3 Ingredients:
+      .new-meal   
+        form(action="/create-meal", method="POST")
+        // Other meal fields
+        select(name="ingredients", id="ingredient", class="form-select")
+            each ingredient in ingredients
+                option(value=ingredient.name)= ingredient.name
+        // Submit button
+        button(type="submit" class="btn btn-primary") Add Meal
+      //- .new-meal   
+      //-   form(action="/create-meal", method="POST")
+      //-   // Other meal fields
+      //-   label(for="ingredient" class="form-label") Select Ingredients:
+      //-   select(name="ingredients", id="ingredient", class="form-select")
+      //-       each ingredient in ingredients
+      //-           option(value=ingredient.name)= ingredient.name
+      //-   // Submit button
+      //-   button(type="submit" class="btn btn-primary") Add Meal
 
   .cheese
+
   .meal-preview
     h2(class= "meal-date") DATE 
     h2 MEAL TYPE
