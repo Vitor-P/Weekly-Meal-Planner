@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const mealSchema = new mongoose.Schema({
   type: {
     type: String,
-    enum: ["breakfast", "lunch", "snack", "dinner"],
+    enum: ["Breakfast", "Lunch", "Snack", "Dinner"],
     required: [true, "An meal must have a type"],
   },
   name: {
@@ -30,6 +30,10 @@ const mealSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+mealSchema.statics.getMealTypes = function () {
+  return this.schema.path("type").enumValues;
+};
 
 const Meal = mongoose.model("Meal", mealSchema);
 

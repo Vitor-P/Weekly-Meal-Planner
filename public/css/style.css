@@ -139,10 +139,26 @@ body::-webkit-scrollbar-thumb {
   right: -0.8rem;
 }
 
+.new-meal-form {
+  padding-left: 1rem;
+}
+
 .new-meal {
+  padding-bottom: 1rem;
+}
+
+.form h3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: ; */
+}
+
+.form-fields {
+  font-size: 400;
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  align-items: baseline;
+  padding-bottom: 1rem;
 }
 
 .cheese {

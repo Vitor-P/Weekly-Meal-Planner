@@ -23,33 +23,25 @@
       h2 MEAL TYPE
       ul.ingredient-list
         li meal ingredients 1
-    div
-      h2 New Meal
-      form(action="/create-meal", method="POST")
-        // Other meal fields
-        select(name="mealType", id="mealType", class="form-select")
-          option(value="Breakfast") Breakfast
-          option(value="Lunch") Lunch
-          option(value="Snack") Snack
-          option(value="Dinner") Dinner
-      h3 Ingredients:
-      .new-meal   
-        form(action="/create-meal", method="POST")
-        // Other meal fields
-        select(name="ingredients", id="ingredient", class="form-select")
-            each ingredient in ingredients
+    .new-meal-form 
+      h2(class= "new-meal") New Meal
+      form(action="/create-meal", method="POST", class= ".form") 
+        .form-fields
+          h3 Meal Type:
+          select(name="mealType", id="mealType" class="form-select")
+            each type in mealType
+              option(value=type)= type
+        .form-fields
+          h3 Ingredients:
+          select(name="ingredients", id="ingredient", class="form-select")
+              each ingredient in ingredients
                 option(value=ingredient.name)= ingredient.name
-        // Submit button
-        button(type="submit" class="btn btn-primary") Add Meal
-      //- .new-meal   
-      //-   form(action="/create-meal", method="POST")
-      //-   // Other meal fields
-      //-   label(for="ingredient" class="form-label") Select Ingredients:
-      //-   select(name="ingredients", id="ingredient", class="form-select")
-      //-       each ingredient in ingredients
-      //-           option(value=ingredient.name)= ingredient.name
-      //-   // Submit button
-      //-   button(type="submit" class="btn btn-primary") Add Meal
+        // Add New Ingredient Option
+        option(value="newIngredient") Add New Ingredient
+
+
+        //- Submit button
+        //- button(type="submit" class="btn btn-primary") Add Meal
 
   .cheese
 
