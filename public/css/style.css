@@ -119,7 +119,7 @@ body::-webkit-scrollbar-thumb {
 
 .meal-middle {
   display: grid;
-  grid-template-columns: 3fr 5fr;
+  grid-template-columns: 2fr 2.5fr;
   gap: 0.5rem;
   padding: 1%;
   grid-column: span 3;
@@ -140,25 +140,52 @@ body::-webkit-scrollbar-thumb {
 }
 
 .new-meal-form {
-  padding-left: 1rem;
-}
-
-.new-meal {
-  padding-bottom: 1rem;
-}
-
-.form h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-top: 2.5rem;
+  padding-left: 1rem;
+  padding: 3rem 1rem 0 1rem;
+  /* border-right: 2px solid rgba(52, 29, 8, 0.596); */
+  position: relative;
+}
+
+.new-meal-form h2 {
+  /* New Meal */
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+
+/* .new-meal {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+} */
+
+.form-fields h3 {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* padding-right: 1rem; */
   /* grid-template-rows: ; */
 }
 
 .form-fields {
-  font-size: 400;
-  display: flex;
-  gap: 0.5rem;
-  align-items: baseline;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
   padding-bottom: 1rem;
+}
+
+.col-1 {
+}
+
+#meal-name {
+  min-width: fit-content;
+  width: 100%;
 }
 
 .cheese {
@@ -214,7 +241,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #ecd6c1;
   /* font-size: 16px; */
   border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
 }
 
 /* Style when dropdown is active/open */
@@ -242,6 +269,10 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   background-color: #614c2e;
   border: 1px solid #614c2e;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: center;
 }
 
 .btn-primary:hover {
