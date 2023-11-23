@@ -25,7 +25,7 @@
         li meal ingredients 1
     .new-meal-form
       h2 New Meal
-      .col-1 
+      .meal-col-1 
         h2(class= "new-meal")
         form(action="/create-meal", method="POST", class= ".form") 
           .form-fields
@@ -45,7 +45,7 @@
                   option(value=ingredient.name)= ingredient.name
             //- // Add New Ingredient Option
             //- option(value="newIngredient") Add New Ingredient
-      .col-2
+      .meal-col-2
         form(action="/create-meal", method="POST", class= ".form") 
           h3 Meal Day:
           select(name="mealType", id="mealType" class="form-select")

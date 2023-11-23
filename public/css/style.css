@@ -164,28 +164,75 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 1rem;
 } */
 
-.form-fields h3 {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  /* padding-right: 1rem; */
-  /* grid-template-rows: ; */
+.meal-col-1 {
 }
 
 .form-fields {
   font-size: 12px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-
   padding-bottom: 1rem;
 }
 
-.col-1 {
-}
+/* .form-fields h3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 1rem; 
+  grid-template-rows: ;
+} */
 
 #meal-name {
   min-width: fit-content;
   width: 100%;
+}
+
+/*TEST*/
+/* CSS for the dropdown */
+.form-select {
+  width: 100%; /* Adjust width as needed */
+  height: fit-content;
+  padding: 0.2rem;
+  background-color: #ecd6c1;
+  /* font-size: 16px; */
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+}
+
+/* Style when dropdown is active/open */
+.form-select:focus {
+  outline: none;
+  border-color: #614c2e; /* Example color for focus state */
+  box-shadow: 0 0 5px #3f301c; /* Example shadow for focus state */
+  overflow: hidden;
+}
+
+/* Example button styles - Adjust as needed */
+.btn {
+  /* display: inline-block; */
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  /* font-size: 16px; */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #614c2e;
+  border: 1px solid #614c2e;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: end;
+  align-self: center;
+}
+
+.btn-primary:hover {
+  background-color: #3f301c;
+  border-color: #3f301c;
 }
 
 .cheese {
@@ -230,52 +277,4 @@ body::-webkit-scrollbar-thumb {
   /* padding: 0 0.4rem 0.6rem 0; */
   gap: 0.6rem;
   list-style: none;
-}
-
-/*TEST*/
-/* CSS for the dropdown */
-.form-select {
-  width: fit-content; /* Adjust width as needed */
-  height: fit-content;
-  padding: 0.5rem;
-  background-color: #ecd6c1;
-  /* font-size: 16px; */
-  border: 1px solid #ccc;
-  border-radius: 0.4rem;
-}
-
-/* Style when dropdown is active/open */
-.form-select:focus {
-  outline: none;
-  border-color: #614c2e; /* Example color for focus state */
-  box-shadow: 0 0 5px #3f301c; /* Example shadow for focus state */
-  overflow: hidden;
-}
-
-/* Example button styles - Adjust as needed */
-.btn {
-  /* display: inline-block; */
-  width: fit-content;
-  height: fit-content;
-  padding: 0.5rem;
-  /* font-size: 16px; */
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #614c2e;
-  border: 1px solid #614c2e;
-  grid-column: 2;
-  grid-row: 2;
-  justify-self: end;
-  align-self: center;
-}
-
-.btn-primary:hover {
-  background-color: #3f301c;
-  border-color: #3f301c;
 }
