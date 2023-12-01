@@ -25,38 +25,50 @@
         li meal ingredients 1
     .new-meal-form
       h2 New Meal
-      .meal-col-1 
-        h2(class= "new-meal")
-        form(action="/create-meal", method="POST", class= ".form") 
-          .form-fields
+      .meal-col-1
+
+        .form-fields 
+        
+          h2(class= "new-meal")
+
             h3 Meal Type:
             select(name="mealType", id="mealType" class="form-select")
               each type in mealType
                 option(value=type)= type
-            h3 Ingredients:
-            div
-              select(name="ingredients", id="ingredient", class="form-select")
-                each num in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-                  option(value=num)= num
+            .meal-ingredients
+              h3 Ingredients:
+              .my-meal
+                select(name="quantities", id="quantity", class="form-select")
+                  each num in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    option(value=num)= num
 
-              select(name="ingredients", id="ingredient", class="form-select")
-                option(value="")= "choose"
-                each ingredient in ingredients
-                  option(value=ingredient.name)= ingredient.name
-            //- // Add New Ingredient Option
-            //- option(value="newIngredient") Add New Ingredient
+                select(name="ingredients", id="ingredient", class="form-select")
+                  option(value="")= "choose"
+                  each ingredient in ingredients
+                    option(value=ingredient.name)= ingredient.name
+            .meal-ingredients
+              h3 Ingredients:
+              .my-meal
+                select(name="quantities", id="quantity", class="form-select")
+                  each num in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    option(value=num)= num
+
+                select(name="ingredients", id="ingredient", class="form-select")
+                  option(value="")= "choose"
+                  each ingredient in ingredients
+                    option(value=ingredient.name)= ingredient.name
+            .meal-ingredients
+              option(value="newIngredient") Add New Ingredient
       .meal-col-2
-        form(action="/create-meal", method="POST", class= ".form") 
+        .form-fields
           h3 Meal Day:
-          select(name="mealType", id="mealType" class="form-select")
-            each type in mealType
-              option(value=type)= type
+          input(type="date", name="mealDay", id="mealDay", class="form-control")
           h3 Meal Name:
           input(name="meal-name", id="meal-name", class="form-select")
-              
+
           //- // Add New Ingredient Option
           //- option(value="newIngredient") Add New Ingredient
-      
+
 
 
         //- Submit button

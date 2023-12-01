@@ -165,6 +165,7 @@ body::-webkit-scrollbar-thumb {
 } */
 
 .meal-col-1 {
+  grid-row: span 2;
 }
 
 .form-fields {
@@ -173,6 +174,26 @@ body::-webkit-scrollbar-thumb {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   padding-bottom: 1rem;
+  gap: 2rem;
+}
+
+.meal-ingredients {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.my-meal {
+  display: flex;
+  width: 100%;
+  /* min-width: fit-content; */
+  gap: 0.5rem;
+  /* grid-column: 2/3; */
+}
+
+#quantity {
+  width: fit-content;
 }
 
 /* .form-fields h3 {
