@@ -172,9 +172,13 @@ body::-webkit-scrollbar-thumb {
   font-size: 12px;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   padding-bottom: 1rem;
   gap: 2rem;
+}
+
+.form-fields h3 {
+  align-self: center;
 }
 
 .meal-ingredients {

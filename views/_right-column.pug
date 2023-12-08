@@ -34,6 +34,7 @@
             h3 Meal Type:
             select(name="mealType", id="mealType" class="form-select")
               each type in mealType
+                option(value="" disabled selected hidden)= ""
                 option(value=type)= type
             .meal-ingredients
               h3 Ingredients:
@@ -43,22 +44,12 @@
                     option(value=num)= num
 
                 select(name="ingredients", id="ingredient", class="form-select")
-                  option(value="")= "choose"
+                  option(value="" disabled  selected hidden )= ""
                   each ingredient in ingredients
                     option(value=ingredient.name)= ingredient.name
             .meal-ingredients
-              h3 Ingredients:
-              .my-meal
-                select(name="quantities", id="quantity", class="form-select")
-                  each num in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-                    option(value=num)= num
-
-                select(name="ingredients", id="ingredient", class="form-select")
-                  option(value="")= "choose"
-                  each ingredient in ingredients
-                    option(value=ingredient.name)= ingredient.name
-            .meal-ingredients
-              option(value="newIngredient") Add New Ingredient
+              button(id="addIngredient") Add New Ingredient 
+      //- Col-2          
       .meal-col-2
         .form-fields
           h3 Meal Day:
@@ -91,3 +82,5 @@
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
+
+script(src="scripts/front-end.js")

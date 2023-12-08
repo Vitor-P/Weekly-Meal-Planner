@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const mealSchema = new mongoose.Schema({
   type: {
     type: String,
-    enum: ["", "Breakfast", "Lunch", "Snack", "Dinner"],
+    enum: ["Breakfast", "Lunch", "Snack", "Dinner"],
     required: [true, "An meal must have a type"],
   },
   name: {

@@ -12,6 +12,7 @@ app.set("views", path.join(__dirname, "views"));
 //Global Middleware
 app.use(express.static(path.join(__dirname, "/public")));
 
+
 app.use(express.json());
 
 //Routing
