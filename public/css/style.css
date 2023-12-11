@@ -166,6 +166,9 @@ body::-webkit-scrollbar-thumb {
 
 .meal-col-1 {
   grid-row: span 2;
+  /* overflow: hidden;
+  max-width: 25rem;
+  overflow-y: scroll; */
 }
 
 .form-fields {
