@@ -1,26 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to handle the button click
+  // Function to handle the button click to add more ingredient selection fields
   function addButtonClick() {
-    // Get the container for ingredient selection fields
     const ingredientContainer = document.querySelector(".meal-ingredients");
     const penultContainer = document.querySelector(".meal-ingredients:nth-last-of-type(2)");
-
-    // Clone the ingredient selection fields
     const clonedIngredients = ingredientContainer.cloneNode(true);
 
-    // Clear the selected values from the cloned fields
     const selects = clonedIngredients.querySelectorAll("select");
     selects.forEach((select) => {
       select.selectedIndex = 0;
     });
 
-    // Insert the cloned fields after the original container
     penultContainer.insertAdjacentElement("afterend", clonedIngredients);
+    //test
+    // const mealDate = document.querySelector("#mealDate");
+    // console.log(mealDate.value);
   }
 
-  // Get the "Add New Ingredient" button
   const addButton = document.getElementById("addIngredient");
-
-  // Add event listener to the button
   addButton.addEventListener("click", addButtonClick);
+
+  // Function to handle the button click to clear additional ingredient selection fields
+  function clearButtonClick() {
+    var removeElements = document.querySelectorAll(".meal-ingredients");
+    // Start the loop from the second element and remove subsequent elements
+    for (var i = 1; i < removeElements.length; i++) {
+      removeElements[i].parentNode.removeChild(removeElements[i]);
+    }
+
+    const formContainer = document.querySelector(".form-fields");
+    const selects = formContainer.querySelectorAll("select");
+    const mealName = document.querySelector("#mealName");
+    const mealDate = document.querySelector("#mealDate");
+
+    selects.forEach((select) => {
+      select.selectedIndex = 0;
+    });
+
+    // console.log(forms);
+    if (mealName) {
+      mealName.value = "";
+    }
+
+    if (mealDate) {
+      mealDate.value = "";
+    }
+  }
+
+  function clearFields() {}
+
+  const clearButton = document.getElementById("clearMeal");
+  clearButton.addEventListener("click", clearButtonClick);
 });

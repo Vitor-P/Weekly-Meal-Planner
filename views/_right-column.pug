@@ -47,15 +47,14 @@
                   option(value="" disabled  selected hidden )= ""
                   each ingredient in ingredients
                     option(value=ingredient.name)= ingredient.name
-            .meal-ingredients
-              button(id="addIngredient") Add New Ingredient 
+            .add-ingredient(id="addIngredient") + Add New Ingredient 
       //- Col-2          
       .meal-col-2
         .form-fields
           h3 Meal Day:
-          input(type="date", name="mealDay", id="mealDay", class="form-control")
+          input(type="date", name="mealDate", id="mealDate", class="form-control")
           h3 Meal Name:
-          input(name="meal-name", id="meal-name", class="form-select")
+          input(name="mealName", id="mealName", class="form-select")
 
           //- // Add New Ingredient Option
           //- option(value="newIngredient") Add New Ingredient
@@ -63,7 +62,9 @@
 
 
         //- Submit button
-      button(type="submit" class="btn btn-primary") Add Meal
+      .btns 
+        button(id="clearMeal" class="btn btn-primary") Clear
+        button(type="submit" class="btn btn-primary") Add Meal
 
   .cheese
 
