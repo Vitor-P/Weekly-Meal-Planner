@@ -1,16 +1,16 @@
 .column-80
   .meal-preview
-    h2(class= "meal-date") DATE
+    h2(class= "meal-date") #{threeDaysAgo}
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
   .meal-preview
-    h2(class= "meal-date") DATE 
+    h2(class= "meal-date") #{twoDaysAgo} 
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
   .meal-preview
-    h2.meal-date DATE
+    h2.meal-date #{yesterday}
     div
       h2 MEAL NAME
       h3 Meal Type
@@ -33,7 +33,7 @@
 
   .meal-middle
     .current-meal
-      h2.meal-date DATE
+      h2.meal-date #{today}
       div
         h2 MEAL NAME
         h3 Meal Type
@@ -115,17 +115,17 @@
   .cheese
 
   .meal-preview
-    h2(class= "meal-date") DATE 
+    h2(class= "meal-date") #{tomorrow} 
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
   .meal-preview
-    h2(class= "meal-date") DATE 
+    h2(class= "meal-date") #{twoDaysToday} 
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1
   .meal-preview
-    h2(class= "meal-date") DATE 
+    h2(class= "meal-date") #{threeDaysToday} 
     h2 MEAL TYPE
     ul.ingredient-list
       li meal ingredients 1

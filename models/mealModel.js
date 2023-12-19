@@ -35,6 +35,8 @@ mealSchema.statics.getMealTypes = function () {
   return this.schema.path("type").enumValues;
 };
 
+mealSchema.statics.getMealByDate = function () {};
+
 const Meal = mongoose.model("Meal", mealSchema);
 
 module.exports = Meal;

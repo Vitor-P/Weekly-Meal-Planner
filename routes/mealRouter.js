@@ -15,4 +15,3 @@ router.route("/").get(mealCon.getMeal).post(mealCon.createMeal);
 router.route("/:id").get(mealCon.getMeal).patch(mealCon.updateMeal).delete(mealCon.deleteMeal);
 
 module.exports = router;
-  
