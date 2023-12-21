@@ -1,5 +1,5 @@
 const formatDate = function (date) {
-  const options = { weekday: "short", day: "2-digit", month: "short" };
+  const options = { weekday: "short", day: "2-digit", month: "short", timeZone: "America/Sao_Paulo" };
   return new Date(date).toLocaleDateString("en-US", options);
 };
 

@@ -130,12 +130,13 @@ body::-webkit-scrollbar-thumb {
 .current-meal {
   position: relative;
   border-right: 2px solid rgba(52, 29, 8, 0.596);
+  height: 22rem;
 }
 
 .current-meal .meal-date {
   position: absolute;
-  top: -0.8rem;
-  right: -0.8rem;
+  top: -0.5rem;
+  right: -0.5rem;
 }
 
 .new-meal-form {
@@ -164,29 +165,33 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 1rem;
 } */
 
-.meal-col-1 {
-  grid-row: span 2;
-  overflow: auto; /* Change overflow to auto */
-  height: 18rem;
-  padding-right: 4px;
+.grid-scrollbar {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
-.meal-col-1::-webkit-scrollbar {
+.grid-scrollbar::-webkit-scrollbar {
   width: 0.4rem;
   padding-left: 2px;
 }
 
 /* Track styles */
-.meal-col-1::-webkit-scrollbar-track {
+.grid-scrollbar::-webkit-scrollbar-track {
   background: #ecd6c1;
   border-radius: 2px;
 }
 
 /* Handle styles (the draggable part of the scrollbar) */
-.meal-col-1::-webkit-scrollbar-thumb {
+.grid-scrollbar::-webkit-scrollbar-thumb {
   background: #966f4a;
   border-radius: 5px;
+}
+
+.meal-col-1 {
+  grid-row: span 2;
+  height: 18rem;
+  padding-right: 4px;
 }
 
 .form-fields {
@@ -334,7 +339,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.2rem 1.7rem 0 0;
+  padding: 0.2rem 1rem 0 0;
 }
 
 .ingredient-list {
