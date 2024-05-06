@@ -28,6 +28,8 @@ body {
   scrollbar-width: thin; /* Set the width of the scrollbar */
   scrollbar-color: #f1f1f1 #888; /* Set the scrollbar track and handle colors */
   overflow-y: scroll;
+  background-image: url(../imgs/close-up-medium-crumpled-paper-background.jpg);
+  background-size: cover;
 }
 
 /* Scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
@@ -104,7 +106,7 @@ body::-webkit-scrollbar-thumb {
   /* margin: 0.2rem; */
   border: 2px solid #bc9168;
   /* border-radius: 20px 0 0 0; */
-  background-color: rgba(188, 145, 104, 0.5);
+  background-color: rgba(188, 145, 104, 0.802);
   position: relative;
 }
 
@@ -131,6 +133,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   border-right: 2px solid rgba(52, 29, 8, 0.596);
   height: 22rem;
+  border-radius: 0 !important;
 }
 
 .current-meal .meal-date {
@@ -153,7 +156,7 @@ body::-webkit-scrollbar-thumb {
 
 .new-meal-form h2 {
   /* New Meal */
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
   top: 0;
   left: 0;
@@ -195,7 +198,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .form-fields {
-  font-size: 12px;
+  font-size: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto;
